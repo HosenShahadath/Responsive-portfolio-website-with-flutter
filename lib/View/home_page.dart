@@ -4,7 +4,9 @@ import 'package:reponsive_portfolio_website_with_flutter/Utils/colors.dart';
 import 'package:reponsive_portfolio_website_with_flutter/View/Components/topbar.dart';
 
 class DeveloperPortFolio extends StatelessWidget {
-  const DeveloperPortFolio({super.key});
+  final ScrollController _scrollController = ScrollController();
+  final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
+  DeveloperPortFolio({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class DeveloperPortFolio extends StatelessWidget {
           Padding(padding: EdgeInsets.only(right: 13), child:  IconButton(
             onPressed: () {},
             icon: const Icon(Icons.menu, color: textColor, size: 35),
-          ),) : Topbar(),
+          ),) : Topbar(scrollController: _scrollController,),
         ],
       ),
     );

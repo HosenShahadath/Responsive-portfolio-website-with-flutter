@@ -22,6 +22,8 @@ class Topbar extends StatelessWidget {
     bool isMobile = false,
   }) {
     int ScrollDuration = isMobile ? 800 : 500;
+    // the main operation is to scroll when we click on any items in topbar
+    // we have perform this operation later
     return [
       Padding(
         padding: EdgeInsets.symmetric(
@@ -66,6 +68,23 @@ class Topbar extends StatelessWidget {
           onPressed: () {},
           child: const Text(
             'Projects',
+            style: TextStyle(
+              fontSize: 20,
+              color: textColor,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+        ),
+      ),
+      Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: isMobile ? 20 : 0,
+        ),
+        child: TextButton(
+          onPressed: () {},
+          child: const Text(
+            'Contact',
             style: TextStyle(
               fontSize: 20,
               color: textColor,
