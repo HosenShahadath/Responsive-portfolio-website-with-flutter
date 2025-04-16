@@ -7,7 +7,7 @@ class Responsive {
   static bool isMobile (BuildContext context){
     return MediaQuery.of(context).size.width <= 600 ;
   }
-  // ohterwise it indicates a dekstop or web and takes the full width of screen
+  // otherwise it indicates a desktop or web and takes the full width of screen
   static double widthOfScreen(BuildContext context) {
     return MediaQuery.of(context).size.width;
   }
